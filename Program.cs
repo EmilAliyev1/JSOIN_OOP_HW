@@ -1,11 +1,13 @@
-﻿using System.Xml.Linq;
+﻿using Newtonsoft.Json;
 
-XDocument doc = XDocument.Load("users.xml");
+string json = File.ReadAllText("users.json");
 
-foreach (var user in doc.Descendants("User"))
+List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+
+foreach (User user in users)
 {
-    Console.WriteLine($"Name: {user.Element("Name")?.Value}");
-    Console.WriteLine($"Age: {user.Element("Age")?.Value}");
-    Console.WriteLine($"City: {user.Element("City")?.Value}");
+    Console.WriteLine($"Name: {user.Name}");
+    Console.WriteLine($"Age: {user.Age}");
+    Console.WriteLine($"City: {user.City}");
     Console.WriteLine();
 }

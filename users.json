@@ -8,5 +8,15 @@
     "Name": "Alice Smith",
     "Age": 30,
     "City": "London"
+  },
+  {
+    "Name": "Bob Brown",
+    "Age": 22,
+    "City": "Berlin"
+  },
+  {
+    "Name": "Emma Wilson",
+    "Age": 27,
+    "City": "Paris"
   }
 ]

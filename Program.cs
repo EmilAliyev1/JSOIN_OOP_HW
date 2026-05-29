@@ -1,13 +1,21 @@
 ﻿using Newtonsoft.Json;
 
-string json = File.ReadAllText("users.json");
+string json = File.ReadAllText("userTypes.json");
 
-List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+UserTypes data = JsonConvert.DeserializeObject<UserTypes>(json);
 
-foreach (User user in users)
+Console.WriteLine("=== ADMINS ===");
+
+foreach (Admin admin in data.Admins)
 {
-    Console.WriteLine($"Name: {user.Name}");
-    Console.WriteLine($"Age: {user.Age}");
-    Console.WriteLine($"City: {user.City}");
-    Console.WriteLine();
+    Console.WriteLine($"{admin.Name} | {admin.PermissionLevel}");
+}
+
+Console.WriteLine();
+
+Console.WriteLine("=== USERS ===");
+
+foreach (RegularUser user in data.Users)
+{
+    Console.WriteLine($"{user.Name} | {user.MembershipType}");
 }

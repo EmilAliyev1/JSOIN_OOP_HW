@@ -1,0 +1,24 @@
+{
+  "Admins": [
+    {
+      "Name": "John Doe",
+      "Age": 35,
+      "City": "New York",
+      "PermissionLevel": "Full Access"
+    }
+  ],
+  "Users": [
+    {
+      "Name": "Alice Smith",
+      "Age": 28,
+      "City": "London",
+      "MembershipType": "Premium"
+    },
+    {
+      "Name": "Bob Brown",
+      "Age": 22,
+      "City": "Berlin",
+      "MembershipType": "Standard"
+    }
+  ]
+}
